@@ -11,25 +11,25 @@
     <p>COACHES ANSWER:</p>
     <% if @question == @question.upcase %>
       <% if @question.blank? %>
-      <p>...</p>
+      <p id="answer">...</p>
       <% elsif @question == "I am going to work right now!".upcase %>
-        <p><%= @answers[:upcase] + ' ' + @answers[:downcase][1] %></p>
+        <p id="answer"><%= @answers[:upcase] + ' ' + @answers[:downcase][1] %></p>
       <% elsif @question.include?("?") %>
-        <p><%= @answers[:upcase] + ' ' + @answers[:downcase][2] %></p>
+        <p id="answer"><%= @answers[:upcase] + ' ' + @answers[:downcase][2] %></p>
       <% else %>
-        <p><%= @answers[:upcase] + ' ' + @answers[:downcase][3] %></p>
+        <p id="answer"><%= @answers[:upcase] + ' ' + @answers[:downcase][3] %></p>
       <% end %>
 
     <% else %>
 
       <% if @question.blank? %>
-        <p>nothing to show here...</p>
+        <p id="answer">...</p>
       <% elsif @question == "I am going to work right now!" %>
-        <p><%= @answers[:downcase][1] %></p>
+        <p id="answer"><%= @answers[:downcase][1] %></p>
       <% elsif @question.include?("?") %>
-        <p><%= @answers[:downcase][2] %></p>
+        <p id="answer"><%= @answers[:downcase][2] %></p>
       <% else %>
-        <p><%= @answers[:downcase][3] %></p>
+        <p id="answer"><%= @answers[:downcase][3] %></p>
       <% end %>
     <% end %>
   </div>
