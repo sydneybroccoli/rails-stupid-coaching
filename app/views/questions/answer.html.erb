@@ -1,0 +1,42 @@
+<!-- <h1>Questions#answer</h1>
+<p>Find me in app/views/questions/answer.html.erb</p>
+ -->
+<div class="main-container">
+  <div class="question-container">
+    <p>YOUR QUESTION:</p>
+    <p>"<%= @question %>"</p>
+  </div>
+  <br>
+  <div class="answer-container">
+    <p>COACHES ANSWER:</p>
+    <% if @question == @question.upcase %>
+      <% if @question.blank? %>
+      <p>nothing to show here...</p>
+      <% elsif @question == "I am going to work right now!".upcase %>
+        <p><%= @answers[:upcase] + ' ' + @answers[:downcase][1] %></p>
+      <% elsif @question.include?("?") %>
+        <p><%= @answers[:upcase] + ' ' + @answers[:downcase][2] %></p>
+      <% else %>
+        <p><%= @answers[:upcase] + ' ' + @answers[:downcase][3] %></p>
+      <% end %>
+
+    <% else %>
+
+      <% if @question.blank? %>
+        <p>nothing to show here...</p>
+      <% elsif @question == "I am going to work right now!" %>
+        <p><%= @answers[:downcase][1] %></p>
+      <% elsif @question.include?("?") %>
+        <p><%= @answers[:downcase][2] %></p>
+      <% else %>
+        <p><%= @answers[:downcase][3] %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <br><br>
+  <div class="redirect-container">
+    <%= link_to 'ASK A NEW QUESTION', '/ask' %>
+<!--     <a href="/ask">ASK A NEW QUESTION</a> -->
+  </div>
+</div>
+

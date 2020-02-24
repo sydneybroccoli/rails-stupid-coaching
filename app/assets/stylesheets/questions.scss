@@ -1,0 +1,49 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$gray: #F4F4F4;
+$fadedyellow: rgba(255,255,127, 0.5);
+
+body {
+  background: $gray;
+}
+
+.ask-container {
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: 10% auto auto auto;
+
+}
+.ask-header {
+  text-align: center;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.form-container {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  justify-self: center;
+}
+
+.question-container {
+  border-left: 5px black solid;
+  padding: 10px;
+  margin: 10px;
+}
+.answer-container {
+  background: $fadedyellow;
+  border-left: 5px black solid;
+  padding: 10px;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  & :hover {
+    text-weight: bold;
+  }
+}
+// a:hover {
+//   font-weight: 600;
+// }
