@@ -11,7 +11,7 @@
     <p>COACHES ANSWER:</p>
     <% if @question == @question.upcase %>
       <% if @question.blank? %>
-      <p>nothing to show here...</p>
+      <p>...</p>
       <% elsif @question == "I am going to work right now!".upcase %>
         <p><%= @answers[:upcase] + ' ' + @answers[:downcase][1] %></p>
       <% elsif @question.include?("?") %>

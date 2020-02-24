@@ -19,23 +19,43 @@ body {
   text-align: center;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
 }
 .form-container {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   justify-self: center;
+  // display: flex;
 }
+// .form-question {
+//   flex-grow: 2;
+// }
+// .form-btn {
+//   flex-grow: 1;
+// }
 
+
+.main-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
 .question-container {
   border-left: 5px black solid;
   padding: 10px;
   margin: 10px;
+  grid-rows: 1 / 2;
 }
 .answer-container {
   background: $fadedyellow;
   border-left: 5px black solid;
   padding: 10px;
   margin: 10px;
+  grid-rows: 2 / 3;
+}
+.redirect-container{
+  grid-rows: 3 / 4;
+  justify-self: center;
+  padding: 10px;
 }
 
 a {
